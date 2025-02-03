@@ -9,6 +9,8 @@ let hasOpponentWon = false;
 
 let emptyCase = 9;
 
+let opponentProfile = document.getElementById("opponent-profile");
+
 let square = document.getElementById("square");
 
 //get the each case in the square
@@ -45,8 +47,6 @@ for(i=0; i<cases.length; i++)
 
 function placeMark(x)
 {
-    checkPlayerWin();
-    checkOppenentWin();
     if(!isGameOver) //not game over
     {
         moveLeftCheck() //check if there are move left
@@ -56,6 +56,8 @@ function placeMark(x)
             x.innerText = player; // X
             playerCanMark = false;
             opponentCanMark = true;
+            playerProfile.style.transform = "scale(1.0)";
+            opponentProfile.style.transform = "scale(1.5)";
             emptyCase -= 1;
         }//opponent place his mark
         else if(x.innerText == "." && opponentCanMark)
@@ -63,15 +65,27 @@ function placeMark(x)
             x.innerText = opponent; // O
             playerCanMark = true;
             opponentCanMark = false;
+            playerProfile.style.transform = "scale(1.5)";
+            opponentProfile.style.transform = "scale(1.0)";
             emptyCase -= 1;
         }
     }
+    checkPlayerWin();
+    checkOppenentWin();
 }
 
 function gameOver()
 {
     emptyCase = 0;
     isGameOver = true;
+
+    if(hasPlayerWon)
+    {
+        alert("Player One Won");
+    }else if(hasOpponentWon)
+    {
+        alert("Player Two Won");
+    }
 }
 
 function moveLeftCheck()

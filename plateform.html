@@ -7,24 +7,49 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="square" id="square">
-        <div class="first-row">
-            <div class="case" id="case1">.</div>
-            <div class="case" id="case2">.</div>
-            <div class="case" id="case3">.</div>
+    <div class="character" id="character">
+        <h2>Select your character</h2>
+        <div class="display-char">
+            <div class="profile">
+                <img src="./img/user1.jpg" id="user1">
+            </div>
+            <div class="profile">
+                <img src="./img/user2.jpg" id="user2">
+            </div>
+            <div class="profile">
+                <img src="./img/user3.jpg" id="user3">
+            </div>
         </div>
-        <div class="second-row">
-            <div class="case" id="case4" draggable="false">.</div>
-            <div class="case" id="case5">.</div>
-            <div class="case" id="case6">.</div>
+        <button class="btn" id="btn-continue">CONTINUE</button>
+    </div>
+
+    <div class="main">
+        <div class="player-profile">
+            <img src="./img/user1.jpg" id="player-profile" class="player-profile" width="200px" height="200px">
         </div>
-        <div class="third-row">
-            <div class="case" id="case7">.</div>
-            <div class="case" id="case8">.</div>
-            <div class="case" id="case9">.</div>
+        <div class="square" id="square">
+            <div class="first-row">
+                <div class="case" id="case1">.</div>
+                <div class="case" id="case2">.</div>
+                <div class="case" id="case3">.</div>
+            </div>
+            <div class="second-row">
+                <div class="case" id="case4" draggable="false">.</div>
+                <div class="case" id="case5">.</div>
+                <div class="case" id="case6">.</div>
+            </div>
+            <div class="third-row">
+                <div class="case" id="case7">.</div>
+                <div class="case" id="case8">.</div>
+                <div class="case" id="case9">.</div>
+            </div>
+        </div>
+        <div class="oppenent-profile">
+            <img src="./img/user3.jpg" width="200px" height="200px" class="opponent-profile" id="opponent-profile">
         </div>
     </div>
 
     <script src="./logic.js"></script>
+    <script src="./character.js"></script>
 </body>
 </html>

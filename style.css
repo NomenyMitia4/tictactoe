@@ -5,6 +5,64 @@
     user-select: none; 
 }
 
+.character
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 60%;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.character .display-char
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.character .profile img
+{
+    width: 100px;
+    height: 100px;
+    border: 20px solid transparent;
+    background: linear-gradient(#3acfd5, #3a4ed5) padding-box, linear-gradient(to top,#3acfd5, #3a4ed5) border-box;
+    border-radius: 50%;
+    border-width: 4px;
+    transition: .5s ease;
+}
+
+.character .profile img:hover
+{
+    cursor: pointer;
+    transition: 0.5s ease;
+    transform: scale(1.2);
+}
+
+.main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-profile
+{
+    transition: .5s ease;
+}
+
+.opponent-profile
+{
+    transition: .5s ease;
+}
+
 .square
 {
     margin-top: 150px;
