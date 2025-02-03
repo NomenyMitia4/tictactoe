@@ -1,0 +1,48 @@
+*{
+    margin: auto;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; 
+}
+
+.square
+{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.first-row
+{
+    display: flex;
+    justify-content: center;
+}
+
+.second-row
+{
+    display: flex;
+    justify-content: center;
+}
+
+.third-row
+{
+    display: flex;
+    justify-content: center;
+}
+
+.case
+{
+    border: 1px black solid;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 20px;
+    font-family: monospace;
+    cursor: pointer;
+}
